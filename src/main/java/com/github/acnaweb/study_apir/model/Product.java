@@ -2,7 +2,12 @@ package com.github.acnaweb.study_apir.model;
 
 import java.math.BigDecimal;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Product {
+    @Id
     private Long id;
     private String nome;
     private BigDecimal valor;
