@@ -49,7 +49,7 @@ API java para estudo de Spring Boot
 
 ## Navegação
 
-### documentação API (swagger)
+### Documentação API (swagger)
 *executando* **Maven**
 
 	mvn spring-boot:run
