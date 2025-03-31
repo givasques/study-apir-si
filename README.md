@@ -8,26 +8,13 @@ API java para estudo de Spring Boot
 
 - **No BASH**
 
-	- `docker pull ubuntu` → download da imagem do SO ubuntu (tipo de linux)
 
-	- `docker images` → fala as imagens que temos no docker
+	- `docker images` → mostra as imagens que temos no docker.
 
-	- `docker run ubuntu` → executamos o container do ubuntu
+	- `docker ps -a` → ver os containers criados através de imagem.
 
-	- `docker ps -a` → ver os containers criados através de imagem
 
-- **No POWERSHELL**
-
-	- `docker run -it ubuntu` → manter dentro do container executando - entrando no modo interativo
-	- `uname` → mostra o nome do ambiente
-
-	- `ls` → listar
-
-	- `ls -lah` → listar em formato de “lista”
-
-	- `exit` → sair do container
-
-### Conexões com BD
+### Conexões com BD - MySQL
 
 - My SQL
 
@@ -45,15 +32,30 @@ API java para estudo de Spring Boot
 
 ## Instalação
 
-*Limpar e criar pasta* */target*
+- Configuração do Swagger
+    - https://springdoc.org/properties.html
+
+- application.properties
+    
+    ```
+    server.port=9000
+	spring.application.name=study-apir
+	pringdoc.swagger-ui.path=/
+    ```
 
 ## Navegação
 
-### Documentação API (swagger)
-*executando* **Maven**
+### Executar a API
+- *Executando* **Maven**
 
-	mvn spring-boot:run
+    ```
+    mvn spring-boot:run
+    ```
+
+### Documentação API (swagger)
 	
+- http://localhost:9000/swagger-ui/index.html
+
 ## Referencias
 
-https://springdoc.org/
+- https://springdoc.org/
