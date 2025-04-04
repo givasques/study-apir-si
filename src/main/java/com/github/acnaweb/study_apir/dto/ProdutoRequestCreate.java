@@ -2,14 +2,14 @@ package com.github.acnaweb.study_apir.dto;
 
 import java.math.BigDecimal;
 
-import com.github.acnaweb.study_apir.model.Product;
+import com.github.acnaweb.study_apir.model.Produto;
 
-public class ProductRequestCreate {
+public class ProdutoRequestCreate {
     private String nome;
 
-    public Product toModel () {
+    public Produto toModel () {
         BigDecimal VALOR_PADRAO = new BigDecimal (200);
-        Product product = new Product();
+        Produto product = new Produto();
         product.setNome(this.nome);
         product.setValor(VALOR_PADRAO);
         return product;
