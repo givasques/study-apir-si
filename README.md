@@ -2,33 +2,9 @@
 
 API java para estudo de Spring Boot
 
-## Docker 
+## MER
 
-### Comandos Docker
-
-- **No BASH**
-
-
-	- `docker images` → mostra as imagens que temos no docker.
-
-	- `docker ps -a` → ver os containers criados através de imagem.
-
-
-### Conexões com BD - MySQL
-
-- My SQL
-
-	```
-	docker run -d \
-		--name mysql \
-		--rm \
-		-e MYSQL_ROOT_PASSWORD=root_pwd \
-		-e MYSQL_USER=new_user \
-		-e MYSQL_PASSWORD=my_pwd \
-		-p 3306:3306 \
-		mysql
-	```
-
+![](assets/images/mer.png)
 
 ## Instalação
 
@@ -59,3 +35,32 @@ API java para estudo de Spring Boot
 ## Referencias
 
 - https://springdoc.org/
+
+## Docker 
+
+### Comandos Docker
+
+- **No BASH**
+
+
+	- `docker images` → mostra as imagens que temos no docker.
+
+	- `docker ps -a` → ver os containers criados através de imagem.
+
+
+### Conexões com BD - MySQL
+
+- My SQL
+
+	```
+	docker run -d \
+		--name mysql \
+		--rm \
+		-e MYSQL_ROOT_PASSWORD=root_pwd \
+		-e MYSQL_USER=new_user \
+		-e MYSQL_PASSWORD=my_pwd \
+		-p 3306:3306 \
+		mysql
+	```
+
+
