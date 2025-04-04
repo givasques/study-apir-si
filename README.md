@@ -42,10 +42,7 @@ API java para estudo de Spring Boot
 
 - **No BASH**
 
-
-	- `docker images` → mostra as imagens que temos no docker.
-
-	- `docker ps -a` → ver os containers criados através de imagem.
+	- `docker ps` → visualizar containers
 
 
 ### Conexões com BD - MySQL
