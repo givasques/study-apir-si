@@ -3,28 +3,58 @@ package com.github.acnaweb.study_apir.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.acnaweb.study_apir.dto.PedidoRequestCreate;
-import com.github.acnaweb.study_apir.model.Item;
 import com.github.acnaweb.study_apir.model.Pedido;
+import com.github.acnaweb.study_apir.model.Produto;
 import com.github.acnaweb.study_apir.repository.PedidoRepository;
+import com.github.acnaweb.study_apir.repository.ProdutoRepository;
+import com.github.acnaweb.study_apir.repository.ItemRepository;
+import com.github.acnaweb.study_apir.model.Item;
 
 @Service
 public class PedidoService {
 
-    // @Autowired
-    // PedidoRepository pedidoRepository;
+    @Autowired
+    private PedidoRepository pedidoRepository;
+    @Autowired
+    private ItemRepository itemRepository;
+    @Autowired
+    private ProdutoRepository produtoRepository;
 
-//     // public Pedido createPedido (PedidoRequestCreate dto) {
-//     //     Pedido pedido = new Pedido();
-//     //     pedido.setStatus(dto.getStatus());
-//     //     pedido.setItens (new ArrayList<Item>());
-//     //     pedidoRepository.save(pedido);
-//     //     return pedido;
-//     // }
+
+    public Pedido create (PedidoRequestCreate dto) {
+        Pedido pedido = new Pedido();
+        pedido.setStatus("ABERTO");
+
+        List <Item> itens = dto.getItems()
+        .stream()
+        .map(i -> {
+            Item item = new Item();
+            //mapeamento
+            Produto produto = produtoRepository
+            .findById(i.getProduto_id())
+            .orElseThrow(() -> {
+                throw new RuntimeException("Produto inexistente: " + i.getProduto_id());
+            });
+
+            item.setProduto(produto);
+            item.setQuantidade(i.getQuantidade());
+            item.setValor(i.getValor());
+            item.setPedido(pedido);
+
+            return item;
+        })
+        .collect(Collectors.toList());
+
+        pedido.setItems(itens);
+
+        return pedidoRepository.save(pedido);
+    }
 
 //     // public Optional <Pedido> getPedidoById (Long id) {
 //     //     return pedidoRepository.findById(id);
