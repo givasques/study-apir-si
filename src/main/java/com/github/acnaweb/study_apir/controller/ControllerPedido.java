@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.acnaweb.study_apir.dto.PedidoRequestCreate;
 import com.github.acnaweb.study_apir.dto.PedidoResponse;
+import com.github.acnaweb.study_apir.model.PedidoStatus;
 import com.github.acnaweb.study_apir.service.PedidoService;
 
 @RestController
@@ -43,5 +44,12 @@ public class ControllerPedido {
         .collect(Collectors.toList());
 
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping ("query")
+    public ResponseEntity<List<PedidoResponse>> findByStatus (PedidoStatus status) {
+        return ResponseEntity.ok(pedidoService.findByStatus(status).stream()
+            .map(pedido -> new PedidoResponse().toDto(pedido))
+            .collect(Collectors.toList()));
     }
 }
