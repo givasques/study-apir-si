@@ -2,6 +2,19 @@
 
 API Java para estudo de Spring Boot
 
+## Variáveis de ambiente
+
+```
+export DB_USER=<usuario do bd>
+export DB_PASSWORD=<senha do bd>
+```
+
+* Usando arquivo .env e carregando em ambiente bash (Linux/Mac)
+
+```
+export $(cat .env | xargs)
+```
+
 ## MER
 
 ![](assets/images/mer.png)
