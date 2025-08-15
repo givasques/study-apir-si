@@ -5,14 +5,18 @@ API Java para estudo de Spring Boot
 ## Variáveis de ambiente
 
 ```
-export DB_USER=<usuario do bd>
-export DB_PASSWORD=<senha do bd>
+export DB_USER=root
+export DB_PASSWORD=root_pwd
+export DB_SERVER=localhost
+export DB_PORT=3306
+export DB_DATABASE=api
 ```
 
 * Usando arquivo .env e carregando em ambiente bash (Linux/Mac)
 
 ```
 export $(cat .env | xargs)
+env | grep DB_
 ```
 
 ## MER
@@ -46,7 +50,7 @@ springdoc.swagger-ui.disable-swagger-default-url=true
 -  *Executando* **Maven**
 
 ```
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 ### Documentação da API (Swagger)
