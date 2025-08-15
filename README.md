@@ -11,8 +11,7 @@ mvn clean package
 - Localizar o .jar em /target
 
 ```
-java -Dspring.profiles.active=dev -jar target/study-apir-0.0.1-SNAPSHOT.jar
-
+java -Dspring.profiles.active=dev -jar target/app.jar
 ```
 
 ## Variáveis de ambiente
