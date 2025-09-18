@@ -1,3 +1,5 @@
+name: Demo de Workflow
+
 on:
   push
   #quando demos push vai acontecer as instruções, que chamamos de jobs
