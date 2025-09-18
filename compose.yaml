@@ -11,14 +11,15 @@ services:
       - app-networks
 
   api:
-    build: .
+    #build: .
+    image: givasques1101/study-apir-si:0.0.3
     depends_on:
       - db
     ports:
       - 9000:9000
     environment:
       - DB_SERVER=db
-      - DB_PORT=3308
+      - DB_PORT=3306
       - DB_DATABASE=api
       - DB_USER=root
       - DB_PASSWORD=root_pwd
