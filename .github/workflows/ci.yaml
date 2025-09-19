@@ -1,0 +1,11 @@
+name: Continuous Integration
+
+on:
+    push
+
+jobs:
+    build_and_pull:
+        runs-on: ubuntu-latest
+        steps: #90% dos jobs começam com um clone do código (checkout)
+            - name: Checkout
+              uses: actions/checkout@v5 #quando abrimos o repo conseguimos ver a versão (nesse caso é a 5)
