@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/givasques/study-apir-si/compare/v1.1.0...v1.1.1) (2025-10-10)
+
+
+### Bug Fixes
+
+* uppercase ([6c32376](https://github.com/givasques/study-apir-si/commit/6c323768b451e419cda504d51c793f949043ec6b))
+
 ## [1.1.0](https://github.com/givasques/study-apir-si/compare/v1.0.0...v1.1.0) (2025-10-10)
 
 
