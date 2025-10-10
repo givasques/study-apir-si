@@ -14,12 +14,7 @@ public class ControllerPing {
 
     @GetMapping
     public String ping() {
-        return "pongx";
-    }
-
-    @GetMapping ("/version")
-    public String version () {
-        return "Versão atual: " + version;
+        return "pongx2";
     }
 
 }
