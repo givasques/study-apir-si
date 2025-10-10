@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/givasques/study-apir-si/compare/v1.0.0...v1.1.0) (2025-10-10)
+
+
+### Features
+
+* add pongx ([2f753cf](https://github.com/givasques/study-apir-si/commit/2f753cfac0ea2d89516cef165f0d0569c8acbe78))
+* change return pong ([291f982](https://github.com/givasques/study-apir-si/commit/291f98289862b14496bcf05b9ec683e8d045772e))
+
+
+### Bug Fixes
+
+* remove endpoint ([fff2ce2](https://github.com/givasques/study-apir-si/commit/fff2ce28c15f628172de00fbc95274b0d87ff783))
+
 ## 1.0.0 (2025-10-10)
 
 
