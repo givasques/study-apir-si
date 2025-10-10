@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/givasques/study-apir-si/compare/v1.1.1...v1.2.0) (2025-10-10)
+
+
+### Features
+
+* setup CI ([5e4c100](https://github.com/givasques/study-apir-si/commit/5e4c100f512b6456c1c16866c23c982688d615c1))
+
+
+### Documentation
+
+* rename title ([84805ac](https://github.com/givasques/study-apir-si/commit/84805ac61b3c0351205b55067c5a856c9ca9d962))
+
 ## [1.1.1](https://github.com/givasques/study-apir-si/compare/v1.1.0...v1.1.1) (2025-10-10)
 
 
