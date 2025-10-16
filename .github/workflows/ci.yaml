@@ -13,3 +13,5 @@ jobs:
               uses: actions/checkout@v5 #quando abrimos o repo conseguimos ver a versão (nesse caso é a 5)
             - name: Build da Aplicacao
               run: mvn clean package
+            - name: Execução de Testes Unitários
+              run: mvn teste
