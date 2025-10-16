@@ -14,4 +14,4 @@ jobs:
             - name: Build da Aplicacao
               run: mvn clean package
             - name: Execução de Testes Unitários
-              run: mvn teste
+              run: mvn test
