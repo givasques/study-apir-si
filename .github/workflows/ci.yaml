@@ -17,3 +17,7 @@ jobs:
               run: mvn clean package -DskipTests
             - name: Execução de Testes Unitários
               run: mvn test
+            - name: Testar criação de Imagem
+              run: docker buil -t study-apir .
+
+            
